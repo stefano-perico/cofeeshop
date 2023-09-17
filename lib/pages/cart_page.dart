@@ -13,11 +13,12 @@ class CartPage extends StatefulWidget {
 
 class _CartPageState extends State<CartPage> {
   // remove coffee from cart
-  removeFromCart(Coffee eachCoffee) {
-    Provider.of<CoffeeShop>(context, listen: false)
-    .removeFromCart(eachCoffee);
+  void removeFromCart(Coffee eachCoffee) {
+    Provider.of<CoffeeShop>(context, listen: false).removeFromCart(eachCoffee);
   }
-  
+
+  void payNow() {}
+
   @override
   Widget build(BuildContext context) {
     return Consumer<CoffeeShop>(
@@ -31,7 +32,7 @@ class _CartPageState extends State<CartPage> {
                 'Cart Page',
                 style: TextStyle(fontSize: 20),
               ),
-    
+
               // list of cart items
               Expanded(
                 child: ListView.builder(
@@ -46,6 +47,25 @@ class _CartPageState extends State<CartPage> {
                       icon: const Icon(Icons.remove),
                     );
                   },
+                ),
+              ),
+
+              // pay button
+              GestureDetector(
+                onTap: payNow,
+                child: Container(
+                  padding: const EdgeInsets.all(25),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.brown,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Pay now',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
                 ),
               )
             ],
