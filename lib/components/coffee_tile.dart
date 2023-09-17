@@ -1,4 +1,4 @@
-import 'package:cofeeshop/models/coffee.dart';
+import 'package:coffee_shop/models/coffee.dart';
 import 'package:flutter/material.dart';
 
 final class CoffeeTile extends StatelessWidget {
