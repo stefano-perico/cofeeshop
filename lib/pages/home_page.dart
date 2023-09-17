@@ -1,3 +1,5 @@
+import 'package:cofeeshop/components/bottom_nav_bar.dart';
+import 'package:cofeeshop/const.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,6 +12,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: backgroundColor,
+      bottomNavigationBar: MyBottomNavBar(),
+    );
   }
 }
