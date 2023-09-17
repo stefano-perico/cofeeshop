@@ -46,6 +46,7 @@ class _ShopPageState extends State<ShopPage> {
                     return CoffeeTile(
                       coffee: eachCoffee,
                       onPressed: () => addToCart(eachCoffee),
+                      icon: const Icon(Icons.add),
                     );
                   },
                 ),
